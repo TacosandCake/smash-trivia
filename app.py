@@ -59,6 +59,30 @@ def questions( answer, question_id ):
                     'error.html',
                     correctAnswer="YOUR CORRECT ANSWERE HERE",
                     next=question_id)
+        elif question_id == 3:
+            if answer == "EGYPT":
+                score += 1
+                return render_template(
+                    'success.html',
+                    score=score,
+                    finished=True)
+            else:
+                return render_template(
+                    'error.html',
+                    correctAnswer="EGYPT",
+                    finished=True)
+        elif question_id == 4:
+            if answer == "YOUR ANSWER HERE":
+                score += 1
+                return render_template(
+                    'success.html',
+                    score=score,
+                    finished=True)
+            else:
+                return render_template(
+                    'error.html',
+                    correctAnswer="YOUR CORRECT ANSWERE HERE",
+                    finished=True)
         elif question_id == 5:
             if answer == "YOUR ANSWER HERE":
                 score += 1
